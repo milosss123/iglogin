@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="language-selector">
+            <select>
+                <option>English (India)</option>
+                <option>English (US)</option>
+                <option>Serbian</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="login-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram Logo" class="logo">
+            <form>
+                <div class="input-group">
+                    <input type="text" class="input-field" id="username" placeholder="Phone number, email or username">
+                </div>
+                <div class="input-group">
+                    <input type="password" class="input-field" id="password" placeholder="Password">
+                    <button type="button" class="toggle-password" onclick="togglePassword()">👁️</button>
+                </div>
+                <button class="login-button" id="login-button" disabled>Log In</button>
+            </form>
+            <div class="forgot-password">
+                Forgot your login details? <span>Get help logging in.</span>
+            </div>
+            <div class="divider">OR</div>
+            <button class="login-with-fb" onclick="showFacebookLoginModal()">Log in with Facebook</button>
+        </div>
+        <div class="signup-container">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Facebook Login Modal -->
+    <div class="fb-modal hidden" id="fb-modal">
+        <div class="fb-modal-content">
+            <h2>Log in with Facebook</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" class="input-field" placeholder="Facebook Email">
+                </div>
+                <div class="input-group">
+                    <input type="password" class="input-field" placeholder="Facebook Password">
+                </div>
+                <button class="login-button">Log In</button>
+            </form>
+            <button class="close-modal" onclick="closeFacebookLoginModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
